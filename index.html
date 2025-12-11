@@ -1,30 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>My First Website</title>
   <meta name="description" content="Artist website and portfolio of recent works">
-  <meta name="keywords" content="art, artist, portfolio, painting, abby, artbyabby">
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TGSK0PV5M0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TGSK0PV5M0');
-</script>
+  <meta name="keywords" content="art,artist,portfolio,painting,abby,artbyabby">
   
+  <!-- link external CSS -->
+  <link rel="stylesheet" href="css/websitecss.css">
 </head>
 <body>
 
-<h1 class="header-title"><strong>Art by Abby</strong></h1>
+	<nav>
+	<div id="mynav">
+	<ul>
+		<li> <a href="html/links.html"> Home </a> </li>
+		<li> <a href="html/gallery.html"> Gallery </a> </li>
+		<li> <a href="html/blog.html"> Blog </a> </li>
+	</ul>	
+	</div>
+	</nav>
+	
+	
+		<div class="portfolio-box">
+ <img src="images/portfolio.jpg" class="responsive-img" alt="portfolio example image">
+ 
+ 
+	<div class="about-text">	
+	<hr>
+	<h2> About Me</h2>
+ <p>Hi, my name is Abigail. I am an artist based in Colorado specializing in painting.<br> 
+	Much of my work is inspired my themes of women's empowerment, social justice, mental health, environmental<br> consciousness, and my personal journey.
+	I am currently pursuing my undergraduate degree, my ultimate goal is to<br>earn a BFA in Art with an emphisis in painting and a graphic design certificate. I was recently accepted to westerns BFA program,
+	where I will continue my journey and work on a series for my gallery my senior year. </p>
+	</div>
+	
+	
+	<div class="about-images">
+		<img src="images/mepainting.jpg" alt="Picture of me watercolor painting" width="350" height="200" >		
+		<img src="images/paintbrush.jpg" alt="My paint brush being dipped into water" width="350" height="200" > 
+		</div>
+</div>
+	
+	
+<div id="current-works">
 <hr>
-<p>In my current classes, I have been working on a variety of projects. Currently I have classes in painting and digital<br>design.
-In my painting class, I am working on my own series, about my experience being mixed-race and Chicana.<br>For this series, I am using artist Frida Kahlo for inspiration.
-These projects showcase my skills and creativity in both<br>digital and physical realms. I am excited to share them with you!</p>
+	<h3> Current Series</h3>
+	
+		<p> My current series is about my experience being mexican american. Asking myself;
+		"What does it mean to me to be Chicana?" "How has being mixed shaped my life?" Each of these pieces tell
+		some aspects of my culture, and my story of being mixed. </p>
+	<hr>
+</div>
+	<div class="gallery">
+	
+  		<img src="images/skeleton.jpg" alt="my image" class="hover-img">
 
-</body>
-</html>
+		
 
+        <img src="images/whataboutmyyoquieros.jpg" alt="my image" class="hover-img">
+        
+
+        <img src="images/twoabbys.jpg" alt="my image" class="hover-img">
+      
+
+        <img src="images/max.jpg" alt="my image" class="hover-img">
+       
+   
+        <img src="images/me.jpg"  alt="my image" class="hover-img">
+    
+
+	</div>
+
+	
+   
+  <div id="header">
+  <hr>
+    <!-- Art by Abby-->
+		<h1 class="header-title"><strong>Art by Abby</strong></h1>
+  <hr>
+  </div>
+   
+   		
+
+	
+	
+
+	
+		
+		</body>
+		</html>
