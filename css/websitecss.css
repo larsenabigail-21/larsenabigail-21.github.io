@@ -235,21 +235,6 @@ nav a{
 	}
 }
 
-@media (max-width: 450px) {
-	.masonry { 
-	column-count: 1;
-	margin: 15px;
-	
-	}
-}
-
-@media (max-width: 450px) {
-	.masonry { 
-	column-count: 1;
-	margin: 15px;
-	
-	}
-}
 @media (orientation: portrait) {
 	.masonry { 
 	column-count: 1;
