@@ -184,31 +184,62 @@ nav a{
 
 
 /* image scroll bar*/
-	
+
+/*hover text images*/
 .gallery {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   gap: 10px;
-  scrollbar-width: none;     /* hide scroll Firefox */
+  scrollbar-width: none;     
 }
 .gallery::-webkit-scrollbar {
-  display: none;              /* hide scroll Chrome */
+  display: none;
 }
 
-.gallery img {
+.img-wrapper {
+  position: relative;
+  flex: 0 0 auto; /* important: keeps horizontal scroll intact */
   width: 300px;
   height: 400px;
-  object-fit: cover;
   scroll-snap-align: center;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
   display: block;
 }
 
-/*hover text images*/
+/* hidden overlay */
+.overlay-text {
+  position: absolute;
+  inset: 0;  /* covers whole image */
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
 
+/* show on hover (desktop) */
+.img-wrapper:hover .overlay-text {
+  opacity: 1;
+}
 
+/* show on tap (mobile) */
+.img-wrapper:active .overlay-text {
+  opacity: 1;
+}
 
 
 
