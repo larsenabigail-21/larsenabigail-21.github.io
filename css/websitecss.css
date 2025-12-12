@@ -1,15 +1,41 @@
 /* === Import Custom Font (Bulletproof Syntax) === */
 @font-face {
-  font-family: 'stellarfont';
-  src: url('fonts/stellarfont.ttf'); 
+  font-family: 'Astarfont';
+  src: url('fonts/Astarfont.ttf'); 
 
   font-weight: bold;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'portfoliofont';
+  src: url('fonts/potfoliofont.ttf'); 
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'cute';
+  src: url('fonts/cute.ttf'); 
+
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-	font-family: 'stellarfont';
+	font-family: 'cute';
+	letter-spacing: 1px;
+}
+p {
+	font-family: 'portfoliofont';
+}
+
+.header {
+	font-family: 'Astarfont';
 	letter-spacing: 2px;
+	font-weight: 800px;
 }
 
 
