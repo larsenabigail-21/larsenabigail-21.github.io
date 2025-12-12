@@ -3,12 +3,13 @@
   font-family: 'stellarfont';
   src: url('fonts/stellarfont.ttf'); 
 
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 
 body {
 	font-family: 'stellarfont';
+	letter-spacing: 2px;
 }
 
 
@@ -156,14 +157,14 @@ nav a{
 }
 
 
-/*===Fixed navigation bar===*/
+/*Fixed navigation bar*/
 #mynav {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: black;  
     padding: 15px 0;
-    z-index: 1000;             /* keeps above everything */
+    z-index: 1000;            
 }
 
 #mynav ul {
@@ -185,7 +186,6 @@ nav a{
 
 /* image scroll bar*/
 
-/*hover text images*/
 .gallery {
   display: flex;
   overflow-x: auto;
@@ -200,10 +200,9 @@ nav a{
 
 .img-wrapper {
   position: relative;
-  flex: 0 0 auto; /* important: keeps horizontal scroll intact */
+  flex: 0 0 auto; 
   width: 300px;
   height: 400px;
-  scroll-snap-align: center;
 }
 
 .img-wrapper img {
@@ -214,10 +213,9 @@ nav a{
   display: block;
 }
 
-/* hidden overlay */
 .overlay-text {
   position: absolute;
-  inset: 0;  /* covers whole image */
+  inset: 0; 
   background: rgba(0,0,0,0.6);
   color: white;
   font-size: 20px;
@@ -231,12 +229,10 @@ nav a{
   transition: opacity 0.3s ease;
 }
 
-/* show on hover (desktop) */
 .img-wrapper:hover .overlay-text {
   opacity: 1;
 }
 
-/* show on tap (mobile) */
 .img-wrapper:active .overlay-text {
   opacity: 1;
 }
@@ -274,70 +270,12 @@ nav a{
 	}
 }
 
-
-/*blog page*/
-
-
-.blog-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-}
-
-/* card container */
-.blog-card {
-  display: block;
-  position: relative;
-  width: 95%;
-  height: 300px;
-  margin: 25px;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Title */
-.card-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: rgba(0,0,0,0.45);
-  color: white;
-}
-
-.blog-card h2 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.blog-card h3 {
-  margin: 5px 0 0;
-  font-size: 1.2rem;
-}
-
-/* Mobile */
-@supports (-webkit-touch-callout: none) {
-  .blog-card {
-    background-attachment: scroll;
-  }
-}
-
-
-
 /* lasting life page */
 
 body {
 	margin: 0;
 	background: #000;
 	color:white;
-	font-family:"Times New Roman", serif;
 }
 
 header {
@@ -398,6 +336,58 @@ nav a:hover {
   overflow: hidden;        
 }
 
+/*blog page boxes*/
+
+.blog-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr; 
+}
+
+
+.blog-card {
+  display: block;
+  position: relative;
+  width: 95%;
+  max-width: 800px;       
+  height: 300px;
+  margin: 25px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+}
+
+/* Text overlay */
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0,0,0,0.45); 
+  color: white;
+}
+
+.blog-card h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.blog-card h3 {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+
+
+
 
 /*  mobile  */
 @media (max-width: 768px) {
@@ -426,6 +416,46 @@ nav a:hover {
   }
 }
 
+/* mental*/
 
+.image-block-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 10px;
+  scrollbar-width: none;     
+}
+.gallery::-webkit-scrollbar {
+  display: none;
+}
 
+.img-wrapper {
+  flex: 0 0 auto;             
+  scroll-snap-align: start;    
+}
 
+.image-block-gallery img {
+  height: 200px;               
+  width: auto;                 
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+.author {
+	margin: 15px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .image-block-gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;           
+  }
+
+  .image-block-gallery img {
+    height: auto;
+    max-width: 90%;             
+  }
+}
