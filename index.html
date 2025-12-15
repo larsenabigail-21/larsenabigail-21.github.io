@@ -12,14 +12,40 @@
   <link rel="stylesheet" href="css/websitecss.css">
 
   <!-- google annalytics -->
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGSKOPV5M0"></script> 
   <script> 
-		window.dataLayer = window.dataLayer || []; 
-		function gtag(){dataLayer.push(arguments);} 
-		gtag('js', new Date()); 
-		gtag('config', 'G-TGSKOPV5M0');
-	</script>
-  
+    window.dataLayer = window.dataLayer || []; 
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date()); 
+    gtag('config', 'G-TGSKOPV5M0');
+  </script>
+</head>
+<body>
+  <button id="addImageBtn">Add Image</button>
+  <div id="mydiv100"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const button = document.getElementById("addImageBtn");
+      const targetDiv = document.getElementById("mydiv100");
+
+      if (!button || !targetDiv) {
+        console.error("Button or target div not found!");
+        return;
+      }
+
+      button.addEventListener("click", () => {
+        const img = document.createElement("img");
+        img.src = `../images/background.jpg?${Math.random()}`;
+        img.style.display = "block";
+        img.style.marginBottom = "10px";
+        targetDiv.appendChild(img);
+      });
+    });
+  </script>
+
 
 </head>
 
